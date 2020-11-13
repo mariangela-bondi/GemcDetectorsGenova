@@ -1,0 +1,30 @@
+<gcard>
+<option name="DBHOST" value="clasdb.jlab.org"/>
+<option name="DATABASE" value="clas12_simulation"/>
+<option name="HIT_PROCESS_LIST" value="BDX"/>
+<option name="PHYSICS"   value="FTFP_BERT_HP + STD + HP" />
+
+	
+<detector name="bdx" factory="TEXT" variation="Proposal"/>
+<option name="geometry" value="900x600"/>
+<option name="HALL_MATERIAL"   value="Vacuum" />
+<option name="HALL_DIMENSIONS" value="100.*m,100.*m,250.*m" />
+	
+  
+<option name="INTEGRATEDRAW" value="flux veto crs"/>
+  
+<option name="BEAM_P"   value="mu+, 5.*GeV, 0*deg, 0*deg"/>
+<option name="SPREAD_P" value="0*GeV, 4*deg, 360*deg"/>
+<option name="BEAM_V" value="(0.,0.,1810.)cm"/>
+<option name="SPREAD_V" value="(0.,0.)cm"/>
+<option name="OUTPUT" value="evio, out.evio"/>
+
+<option name="MAX_X_POS"   value="20000." />
+<option name="MAX_Y_POS"   value="30000." />
+<option name="MAX_Z_POS"   value="50000." />
+<option name="PRODUCTIONCUT"   value="100" />
+<option name="RECORD_PASSBY" value="0" />
+
+
+
+</gcard>

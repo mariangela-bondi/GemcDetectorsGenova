@@ -56,7 +56,12 @@ define_bdx_materials();
          make_bdx_CT();
    
 }
-    else
+elsif ($configuration{"variation"} eq "BDXmini")
+{
+    print "variation BDXmini\n";
+    make_hallA_bdxMini();
+}
+else
      {
 	 print "variation Proposal\n";
          make_hallA_bdx();

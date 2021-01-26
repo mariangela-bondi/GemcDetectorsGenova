@@ -24,7 +24,7 @@
 
 	<!--<option name="SAVE_ALL_MOTHERS" value="1"/>-->
 
-	<!--<option name="RECORD_PASSBY" value="1" />-->
+	<option name="RECORD_PASSBY" value="1" />
 
 	<!--<option name="PHYSICS"   value="FTFP_BERT_HP + STD + HP" />-->
 	<option name="PHYSICS"   value="STD + HP" />

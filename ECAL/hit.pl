@@ -16,15 +16,14 @@ sub define_ECAL_hits
     	$hit{"signalThreshold"} = "200.0*KeV";
     	$hit{"timeWindow"}      = "1000*ns";
 
-	#$hit{"prodThreshold"}   = "155769*um";
+	#$hit{"prodThreshold"}   = "155769*um"; Gamma threshold in PbWO4
 	#$hit{"prodThreshold"}   = "155768*um";
-
-	#$hit{"prodThreshold"}   = "106910*um";
+	#$hit{"prodThreshold"}   = "106910*um"; Gamma threshold in Pb
 	#$hit{"prodThreshold"}   = "106909*um";
 
-	$hit{"prodThreshold"}   = "160*mm";
+	$hit{"prodThreshold"}   = "100*mm";
 
-	$hit{"maxStep"}         = "1000*mm"; ##da togliere 
+	$hit{"maxStep"}         = "1000*mm"; 
     	$hit{"delay"}           = "10*ns";
     	$hit{"riseTime"}        = "1*ns";
     	$hit{"fallTime"}        = "1*ns";

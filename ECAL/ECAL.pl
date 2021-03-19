@@ -13,9 +13,6 @@ use materials;
 use Math::Trig;
 
 
-#./ECAL.pl config.dat ; ../../GemcSourceGenova/gemc ECAL.gcard
-#./ECAL.pl config.dat ; $GEMC/gemc ECAL.gcard
-
 # Loading configuration file and paramters
 our %configuration = load_configuration($ARGV[0]);
 

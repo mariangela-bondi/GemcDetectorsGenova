@@ -19,6 +19,8 @@
 	<option name="JPOS_TRG" value="JPOS_crs,0,10.6*GeV,0,100*ns"/>
 	
 	<option name="ENERGY_CUT" value="-1"/>
+	<!-- Il valore dell' E.C. non risente delle unità di misura, sono MeV e basta! -->	
+
 	<option name="SAVE_RANDOM" value="1"/>
 
 

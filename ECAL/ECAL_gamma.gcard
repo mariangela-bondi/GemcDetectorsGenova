@@ -16,7 +16,10 @@
 
 	<!-- FINE -NON TOCCARE -->
 	<option name="PRODUCTIONCUT" value="1*mm"/>
-	<option name="JPOS_TRG" value="JPOS_crs,0,200*MeV,0,100*ns"/>
+
+	<!--<option name="JPOS_TRG" value="JPOS_crs,0,11*GeV,0,100*ns"/> -->
+	<!--<option name="JPOS_TRG" value="flux,5.107e-26*MeV,11*GeV,0,100*ns"/> -->
+	<option name="JPOS_TRG_2" value="flux,1000*MeV,12*GeV,0,100*ns"/>
 
 	<option name="ENERGY_CUT" value="1000"/>
 	<!-- Il valore dell' E.C. non risente delle unità di misura, sono MeV e basta! -->	

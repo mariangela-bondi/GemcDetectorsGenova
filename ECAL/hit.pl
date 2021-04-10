@@ -31,6 +31,24 @@ sub define_ECAL_hits
     	$hit{"pedestal"}        = -20;
 	print_hit(\%configuration, \%hit);
 
+
+    	%hit = init_hit();
+    	$hit{"name"}            = "JPOS_HCAL";
+    	$hit{"description"}     = "JPOS HCAL";
+    	$hit{"identifiers"}     = "sector layer channel";
+    	$hit{"signalThreshold"} = "200.0*KeV";
+    	$hit{"timeWindow"}      = "1000*ns";
+	$hit{"prodThreshold"}   = "100*mm";
+	$hit{"maxStep"}         = "1000*mm"; 
+    	$hit{"delay"}           = "10*ns";
+    	$hit{"riseTime"}        = "1*ns";
+    	$hit{"fallTime"}        = "1*ns";
+    	$hit{"mvToMeV"}         = 100;
+    	$hit{"pedestal"}        = -20;
+	print_hit(\%configuration, \%hit);
+
+	
+
 }
 
 1;

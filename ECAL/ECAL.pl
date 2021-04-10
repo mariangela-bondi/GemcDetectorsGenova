@@ -10,7 +10,6 @@ use bank;
 use math;
 use materials;
 
-use Math::Trig;
 
 
 # Loading configuration file and paramters

@@ -41,8 +41,8 @@ my $shZ=0.;
 # Crystal PbWO4 total volume 
 my $cri_x=10/2.;
 my $cri_y=10/2.;
-my $cri_z=17.8/2; ## 20 X0
-#my $cri_z=35.6/2; ## 40 X0
+#my $cri_z=17.8/2; ## 20 X0
+my $cri_z=35.6/2; ## 40 X0
 #my $cri_z=53.4/2; ## 60 X0
 
 my $cri_h=0.5/2.;   ## hole 

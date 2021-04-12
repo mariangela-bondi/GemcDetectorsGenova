@@ -21,9 +21,9 @@ sub make_main_volume{
   $detector{"pos"}         = "$X*cm $Y*cm $Z*cm";
   $detector{"rotation"}    = "0*deg 0*deg 0*deg";
   
-  my $par1 = 500.;
-  my $par2 = 500.;
-  my $par3 = 500.;
+  my $par1 = 1000.;
+  my $par2 = 1000.;
+  my $par3 = 1000.;
   $detector{"dimensions"}  = "$par1*cm $par2*cm $par3*cm";
   $detector{"material"}    = "G4_Galactic";
   print_det(\%configuration, \%detector);
@@ -41,8 +41,8 @@ my $shZ=0.;
 # Crystal PbWO4 total volume 
 my $cri_x=10/2.;
 my $cri_y=10/2.;
-my $cri_z=17.8/2; ## 20 X0
-#my $cri_z=35.6/2; ## 40 X0
+#my $cri_z=17.8/2; ## 20 X0
+my $cri_z=35.6/2; ## 40 X0
 #my $cri_z=53.4/2; ## 60 X0
 
 my $cri_h=0.5/2.;   ## hole 
@@ -62,12 +62,12 @@ my $fluxW = 0.1/2;
 
 #HCAL
 my $N_layers_L = 5;
-my $N_layers_B = 13;
-my $N_layers_F = 3;
+my $N_layers_B = 48;
+my $N_layers_F = 0;
 
-my $PbW = 0.8/2;
+my $PbW = 5.0/2;
 #my $PbW = 0.2/2;
-my $ScW = 1.2/2;
+my $ScW = 2.0/2;
 #my $ScW = 0.3/2;
 
 my $HCAL_h=2/2.;
@@ -142,7 +142,7 @@ sub make_PbWO4{
 	      $detector{"sensitivity"} = "no";
 	      $detector{"hit_type"}    = "no";
 	      $detector{"identifiers"} = "no";
-	      print_det(\%configuration, \%detector);
+	      #print_det(\%configuration, \%detector);
 	  }
       }
   }

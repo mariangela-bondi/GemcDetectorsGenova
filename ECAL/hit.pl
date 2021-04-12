@@ -37,7 +37,7 @@ sub define_ECAL_hits
     	$hit{"description"}     = "JPOS HCAL";
     	$hit{"identifiers"}     = "sector layer channel";
     	$hit{"signalThreshold"} = "200.0*KeV";
-    	$hit{"timeWindow"}      = "1000*ns";
+    	$hit{"timeWindow"}      = "100*ns";
 	$hit{"prodThreshold"}   = "100*mm";
 	$hit{"maxStep"}         = "1000*mm"; 
     	$hit{"delay"}           = "10*ns";

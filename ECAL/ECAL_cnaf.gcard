@@ -5,8 +5,8 @@
 <option name="HIT_PROCESS_LIST" value="JPOS"/>
 <detector name="JPOS" factory="TEXT" variation="test1"/>
 
-<!--<option name="INTEGRATEDRAW" value="cormo flux veto crs JPOS_crs JPOS_HCAL"/>-->
-<option name="INTEGRATEDRAW" value="flux"/>
+<option name="INTEGRATEDRAW" value="flux JPOS_crs JPOS_HCAL"/>
+<!--<option name="INTEGRATEDRAW" value="flux"/>-->
 
 <option name="geometry" value="900x600"/>
 <option name="OUTPUT" value="evio, out.evio"/>
@@ -21,6 +21,9 @@
 	<!-- Il valore dell' E.C. non risente delle unità di misura, sono MeV e basta! -->	
 
 	<option name="PRODUCTIONCUT" value="1*mm"/>
+	<!--<option name="JPOS_TRG" value="JPOS_crs,0,10.0*GeV,0,100*ns"/>-->	
+	<option name="SAVE_RANDOM" value="1"/>	
+	
 	
 	<!--<option name="SAVE_ALL_MOTHERS" value="1"/>-->
 

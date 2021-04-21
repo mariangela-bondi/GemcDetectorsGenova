@@ -22,6 +22,7 @@
 
 	<option name="PRODUCTIONCUT" value="1*mm"/>
 	<!--<option name="JPOS_TRG" value="JPOS_crs,0,10.0*GeV,0,100*ns"/>-->	
+	<option name="JPOS_TRG_3" value="JPOS_HCAL,1.0*MeV,10.0*GeV,0*ns,100*ns,999,999,999,999,999,10"/>	
 	<option name="SAVE_RANDOM" value="1"/>	
 	
 	

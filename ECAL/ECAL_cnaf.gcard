@@ -33,8 +33,8 @@
 	<option name="PHYSICS"   value="FTFP_BERT_HP + STD + HP" />
 	<!--<option name="PHYSICS"   value="STD + HP" />-->
 	
-	<option name="BEAM_P"   value="neutron,6.5*GeV, 0*deg, 0*deg"/>
-	<option name="SPREAD_P" value="5500*MeV, 0*deg, 0*deg"/>
+	<option name="BEAM_P"   value="neutron,0.5*GeV, 0*deg, 0*deg"/>
+	<!--<option name="SPREAD_P" value="5500*MeV, 0*deg, 0*deg"/>-->
 	<!--<option name="SPREAD_V" value="(2.,0.)cm"/>-->
 	<option name="BEAM_V" value="(0,0,17.8)cm"/>
 

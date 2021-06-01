@@ -1,0 +1,10 @@
+           poker_crs  |              bankid  |                                 poker_crs bank ID  |  300   |                  Di  
+           poker_crs  |              sector  |                                     sector number  |    1   |                  Di  
+           poker_crs  |                 xch  |                                        xch number  |    2   |                  Di  
+           poker_crs  |                 ych  |                                        ych number  |    3   |                  Di  
+           poker_crs  |                 zch  |                                        zch number  |    4   |                  Di  
+           poker_crs  |                 Npe  |                                               Npe  |    5   |                  Di  
+           poker_crs  |             Npe_sat  |                                           Npe_sat  |    6   |                  Di  
+           poker_crs  |              Etot_B  |                                            Etot_B  |    7   |                  Di  
+           poker_crs  |            Etot_noB  |                                          Etot_noB  |    8   |                  Di  
+           poker_crs  |                hitn  |                                        hit number  |   99   |                  Di  

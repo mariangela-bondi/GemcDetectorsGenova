@@ -30,7 +30,7 @@ sub make_poker_main_volume
     my $Y = 0.;
     my $Z = 0.;
     $detector{"pos"}         = "$X*cm $Y*cm $Z*cm";
-    $detector{"rotation"}    = "0*deg 180*deg 180*deg";
+    $detector{"rotation"}    = "0*deg 0*deg 0*deg";
     
     my $par1 = 100.;
     my $par2 = 100.;

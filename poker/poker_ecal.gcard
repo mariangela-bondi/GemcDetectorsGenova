@@ -5,15 +5,16 @@
 <option name="PHYSICS"   value="STD" />
 <detector name="poker" factory="TEXT" variation="ecal"/>
 <option name="geometry" value="900x600"/>
-<option name="INTEGRATEDRAW" value="flux poker_crs"/>
+<option name="INTEGRATEDRAW" value="flux"/>
 <option name="HALL_MATERIAL"   value="Vacuum" />
 <option name="HALL_DIMENSIONS" value="250.*cm,250.*cm,250.*cm" />
-<option name="BEAM_P"   value="e+, 10*GeV, 180*deg, 0*deg"/>
-<option name="BEAM_V" value="(0.,0.,20.)cm"/>
-<option name="SPREAD_V" value="(0.,0.)cm"/>
+<option name="BEAM_P"   value="e+, 100*GeV, 0*deg, 0*deg"/>
+<option name="BEAM_V" value="(0.,0.,-20.)cm"/>
+<option name="SPREAD_V" value="(0.1,0.1)cm"/>
 <option name="OUTPUT" value="evio, out.evio"/>
 <option name="MAX_X_POS"   value="20000." />
 <option name="MAX_Y_POS"   value="30000." />
 <option name="MAX_Z_POS"   value="50000." />
 <option name="RECORD_PASSBY" value="1" />
+<option name="JPOS_TRG" value="poker_crs,50*GeV,100*GeV,0*ns,100*ns" />
 </gcard>

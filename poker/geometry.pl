@@ -44,7 +44,7 @@ sub make_poker_main_volume
     my $Ny = 10;                          # Number of crystals in vertical directions
     my $Nz =4;                            # Number of layers in z directions.
     my $detPWO_Width = 20.;               # Crystal width in mm
-    my $detPWO_Thickness = 250.;          # Crystal lenght in mm
+    my $detPWO_Thickness = 200.;          # Crystal lenght in mm
     my $detPWO_preshower_Thickness = 200.;          # Crystal lenght in mm for the preshower
     my $Wrapping =0;                      # Thickness of the wrapping
     my $AGap =0.0;                          # Air Gap between Crystals
@@ -56,9 +56,9 @@ sub make_ecal
 {
     my %detector = init_det();
 
-    my $centX = ( int $Nx/2 )+0.5;
-    my $centY = ( int $Ny/2 )+0.5;
-    my $centZ = ( int $Nz/2 )+0.5;
+    my $centX = ( $Nx/2 )+0.5;
+    my $centY = ( $Ny/2 )+0.5;
+    my $centZ = ( $Nz/2 )+0.5;
     my $y_C =0;
     my $x_C =0;
     my $z_C=0;
@@ -68,7 +68,8 @@ sub make_ecal
     my $iZ=0;
     
     #PRESHOWER
-    my $iY =$Ny/2;
+
+    my $iY = int $Ny/2;
     for(my $iZ=1; $iZ<=$Nz-1; $iZ++)
     {
         for(my $iX=1; $iX<=$Nx; $iX++)
@@ -115,9 +116,9 @@ sub make_ecal
             $detector{"identifiers"} = "sector manual $man xch manual $iX ych manual $iY zch manual $iZ ";
             print_det(\%configuration, \%detector);
             
-        }
+       }
     }
-    
+   
     
     
     #ECAL
@@ -190,8 +191,12 @@ sub make_flux
     $detector{"type"}        = "Box";
     
     my $X = 0.; 
+    
+    ##my $Y = $Tot_preshower_thickness/2;
     my $Y = ($Ny/2)*$Tot_width;
+
     my $Z = (($Nz-1)*$Tot_width + $Tot_thickness)/2;
+
     $detector{"pos"}         = "$X*mm $Y*mm $Z*mm";
     $detector{"rotation"}    = "0*deg 0*deg 0*deg";
     
@@ -217,7 +222,7 @@ sub make_flux
     $detector{"type"}        = "Box";
     
      $X = 0.; 
-     $Y = -($Ny/2)*$Tot_width;
+     $Y = -$Tot_preshower_thickness/2;
      $Z = (($Nz-1)*$Tot_width + $Tot_thickness)/2;
     $detector{"pos"}         = "$X*mm $Y*mm $Z*mm";
     $detector{"rotation"}    = "0*deg 0*deg 0*deg";
@@ -243,13 +248,14 @@ sub make_flux
     $detector{"visible"}     = 1;
     $detector{"type"}        = "Box";
     
-     $X = -($Nx/2)*$Tot_width;
+     $X = -($Nx/2)*$Tot_width;       
      $Y = 0.;
      $Z = (($Nz-1)*$Tot_width + $Tot_thickness)/2;
     $detector{"pos"}         = "$X*mm $Y*mm $Z*mm";
     $detector{"rotation"}    = "0*deg 0*deg 90*deg";
     
-     $par1 = $Nx*$Tot_width/2;
+  #   $par1 = $Nx*$Tot_width/2;
+     $par1 = $Tot_preshower_thickness/2;
      $par2 = 1/2;
      $par3 = (($Nz-1)*$Tot_width + $Tot_thickness)/2;
 
@@ -275,8 +281,9 @@ sub make_flux
     $detector{"pos"}         = "$X*mm $Y*mm $Z*mm";
     $detector{"rotation"}    = "0*deg 0*deg 90*deg";
     
-     $par1 = $Nx*$Tot_width/2;
-     $par2 = 1/2;
+   #  $par1 = $Nx*$Tot_width/2;
+     $par1 = $Tot_preshower_thickness/2;
+      $par2 = 1/2;
      $par3 = (($Nz-1)*$Tot_width + $Tot_thickness)/2;
 
     $detector{"dimensions"}  = "$par1*mm $par2*mm $par3*mm";

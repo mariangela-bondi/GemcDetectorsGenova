@@ -23,6 +23,7 @@
 <option name="MAX_Y_POS"   value="30000." />
 <option name="MAX_Z_POS"   value="50000." />
 <option name="PRODUCTIONCUT"   value="1*mm" />
+<option name="SAVE_ALL_MOTHERS"   value="1" />
 <option name="RECORD_PASSBY" value="1" />
 
 

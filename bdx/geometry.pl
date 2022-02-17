@@ -19,8 +19,8 @@ if ($configuration{"variation"} eq "CT") {$flag_JlabCT = 0 ;}
 # $flag_mutest = 1 -> Hall-A mu tests
 ### $flag_minibdx=0 standard BDX-Hodo
 ### $flag_minibdx!=0 BDX-Mini
-my $flag_mutest =1;
-my $flag_minibdx =1;
+my $flag_mutest =0;
+my $flag_minibdx =0;
 
 ### JLab_paddle_setup=0 use bottom inner veto lid
 ### JLab_paddle_setup=0 use external paddle in place
@@ -1226,7 +1226,7 @@ sub make_muon_absorber
         $detector{"hit_type"}    = "flux";
         my $nflux=201+$iz;
         $detector{"identifiers"} = "id manual $nflux";
-        # print_det(\%configuration, \%detector);
+         print_det(\%configuration, \%detector);
     }
 
 }
@@ -1294,6 +1294,53 @@ sub make_det_house_inner
     $detector{"dimensions"}  = "$roomx*cm $roomy*cm $roomz*cm";
     $detector{"material"}    = "G4_AIR";
     print_det(\%configuration, \%detector);
+    
+}
+
+sub make_bunker_flux
+{
+    # add flux detectors
+    my $absorber_nflux=20;
+    my $absorber_flux_dy=50.;
+    my $absorber_flux_lx=100.;
+    my $absorber_flux_lz=100.;
+    my $absorber_flux_ly=0.01;
+    for(my $iy=0; $iy<$absorber_nflux; $iy++)
+    {
+        my $X = 0.;
+        my $Y = $iy*$absorber_flux_dy +150;
+        my $Z =0. ;
+    
+        my %detector = init_det();
+        $detector{"name"}        = "absorber_flux_top_$iy";
+    if($Y<$Bunker_dy) { # flux detector is in upstream concrete block
+      $detector{"mother"}      = "Bunker_main";
+      $detector{"material"}    = "BDX_Concrete";
+        $Z = -$Bunker_main_rel_z  ;
+        }
+    elsif($Y>=$Bunker_dy && $Y<$Dirt_ymax) {
+      $detector{"mother"}      = "dirt";
+      $detector{"material"}    = "BDX_Concrete";
+    }else{
+        $detector{"mother"}      = "main_volume";
+        $detector{"material"}    = "BDX_Concrete";
+    }
+        $detector{"description"} = "absorber flux top detector $iy ";
+        $detector{"color"}       = "cc00ff";
+        $detector{"style"}       = 0;
+        $detector{"visible"}     = 1;
+        $detector{"type"}        = "Box";
+        $detector{"pos"}         = "$X*cm $Y*cm $Z*cm";
+        $detector{"rotation"}    = "0*deg 0*deg 0*deg";
+        $detector{"dimensions"}  = "$absorber_flux_lx*cm $absorber_flux_ly*cm $absorber_flux_lz*cm";
+        $detector{"sensitivity"} = "flux";
+        $detector{"hit_type"}    = "flux";
+        my $nflux=301+$iy;
+        $detector{"identifiers"} = "id manual $nflux";
+         print_det(\%configuration, \%detector);
+    }
+    
+    
     
 }
 
@@ -5426,6 +5473,10 @@ sub make_hallA_bdx
                 make_bunker();
                 make_bunker_end();
                 make_hallaBD();
+                if(($configuration{"variation"} eq "nuBDX"))
+                {
+                    make_bunker_flux();
+                }
                 #make_hallaBD_flux_barrel();
                 #make_hallaBD_flux_endcup();
                 #make_hallaBD_flux();

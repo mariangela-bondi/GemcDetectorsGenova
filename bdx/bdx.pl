@@ -61,14 +61,19 @@ elsif ($configuration{"variation"} eq "BDXmini")
     print "variation BDXmini\n";
     make_hallA_bdxMini();
 }
-else
+elsif ($configuration{"variation"} eq "Proposal")
      {
 	 print "variation Proposal\n";
          make_hallA_bdx();
          make_detector_bdx();
          
      }
-    
+else
+     {
+     print "variation nuBDX\n";
+           make_hallA_bdx();
+          
+}
     
 
 
